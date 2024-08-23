@@ -1,0 +1,121 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type Test {
+  id: String!
+  title: String!
+  content: String
+}
+
+type TestCreated {
+  id: Int!
+  content: String!
+  title: String!
+  createdAt: String!
+}
+
+type User {
+  id: String!
+  name: String!
+  email: String!
+  phone: String!
+  role: String!
+  password: String!
+}
+
+type AuthResponse {
+  token: String!
+  role: String!
+  id: String!
+}
+
+type Movement {
+  id: String!
+  concept: String!
+  amount: String!
+  date: String!
+  userId: String!
+  type: String!
+}
+
+type MovementRelationUser {
+  id: String!
+  concept: String!
+  amount: String!
+  date: String!
+  userId: String!
+  type: String!
+  userName: String!
+}
+
+type Query {
+  tests: [Test!]!
+  findAllUsers: [User!]!
+  findUserById(id: String!): User!
+  auth(auth: Auth!): AuthResponse!
+  findAllMovements: [MovementRelationUser!]!
+  movement(id: String!): Movement!
+}
+
+input Auth {
+  email: String!
+  password: String!
+}
+
+type Mutation {
+  addItem(testInput: CreateTest!): Test!
+  addIntoDB(testInput: CreateTestDB!): TestCreated!
+  createNewUser(createUser: CreateUserInput!): User!
+  updateUser(updateUser: UpdateUserInput!): User!
+  createNewMovement(createMovementInput: CreateMovementInput!): Movement!
+  updateMovement(updateMovementInput: UpdateMovementInput!): Movement!
+}
+
+input CreateTest {
+  id: String!
+  title: String!
+  content: String!
+}
+
+input CreateTestDB {
+  title: String!
+  content: String!
+}
+
+input CreateUserInput {
+  """Nombre del usuario"""
+  name: String!
+  email: String!
+  phone: String!
+  role: String!
+  password: String!
+}
+
+input UpdateUserInput {
+  """Nombre del usuario"""
+  name: String!
+  email: String!
+  phone: String!
+  role: String!
+  password: String
+
+  """UUID"""
+  id: String!
+}
+
+input CreateMovementInput {
+  concept: String!
+  amount: String!
+  userId: String!
+  type: String!
+}
+
+input UpdateMovementInput {
+  concept: String!
+  amount: String!
+  userId: String!
+  type: String!
+  id: String!
+  date: String!
+}
