@@ -37,7 +37,7 @@ async function bootstrap() {
       //exposedHeaders:['*'],
     });
 
-    await app.listen(port, () => {
+    await app.listen(8080, () => {
       console.debug(`App running on port: ${port}`);
     });
   } catch (err: any) {
