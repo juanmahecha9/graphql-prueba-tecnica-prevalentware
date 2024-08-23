@@ -5,6 +5,7 @@ import { ApolloDriver, ApolloDriverConfig } from '@nestjs/apollo';
 import { TestModule } from './test/test.module';
 import { UsersModule } from './users/users.module';
 import { MovementsModule } from './movements/movements.module';
+import { TestingModule } from './testing/testing.module';
 @Module({
   imports: [
     GraphQLModule.forRoot<ApolloDriverConfig>({
@@ -14,6 +15,7 @@ import { MovementsModule } from './movements/movements.module';
     TestModule,
     UsersModule,
     MovementsModule,
+    TestingModule,
   ],
   controllers: [],
   providers: [],
