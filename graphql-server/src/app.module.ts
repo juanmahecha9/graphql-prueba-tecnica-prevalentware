@@ -10,8 +10,8 @@ import { MovementsModule } from './movements/movements.module';
   imports: [
     GraphQLModule.forRoot<ApolloDriverConfig>({
       driver: ApolloDriver,
-      //autoSchemaFile: join(process.cwd(), 'src/schema.gql'),
-      autoSchemaFile: true,
+      autoSchemaFile: join(process.cwd(), 'src/schema.gql'),
+      //autoSchemaFile: true,
       playground: true,
       debug: true,
     }),
