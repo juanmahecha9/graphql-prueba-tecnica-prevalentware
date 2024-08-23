@@ -1,9 +1,17 @@
-import { Controller, Get, Post, Body, Patch, Param, Delete } from '@nestjs/common';
+import {
+  Controller,
+  Get,
+  Post,
+  Body,
+  Patch,
+  Param,
+  Delete,
+} from '@nestjs/common';
 import { TestingService } from './testing.service';
 import { CreateTestingDto } from './dto/create-testing.dto';
 import { UpdateTestingDto } from './dto/update-testing.dto';
 
-@Controller('testing')
+@Controller('/')
 export class TestingController {
   constructor(private readonly testingService: TestingService) {}
 
