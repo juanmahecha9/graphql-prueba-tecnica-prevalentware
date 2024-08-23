@@ -1,7 +1,5 @@
 import * as dotenv from 'dotenv';
-import express from 'express';
 import { AppModule } from './app.module';
-import * as bodyParser from 'body-parser';
 import { NestFactory } from '@nestjs/core';
 
 dotenv.config();
