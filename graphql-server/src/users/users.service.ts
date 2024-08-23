@@ -1,10 +1,9 @@
 import { Injectable } from '@nestjs/common';
 import { CreateUserInput } from './dto/create-user.input';
 import { UpdateUserInput } from './dto/update-user.input';
-import { PrismaService } from 'src/shared/prisma/prisma.service';
+import { PrismaService } from '../shared/prisma/prisma.service';
 import { Auth, AuthResponse, User } from './entities/user.entity';
-import { emitWarning } from 'process';
-import { CryptoService } from 'src/shared/crypto/crypto';
+import { CryptoService } from '../shared/crypto/crypto';
 
 @Injectable()
 export class UsersService {

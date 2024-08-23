@@ -1,7 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import { CreateMovementInput } from './dto/create-movement.input';
 import { UpdateMovementInput } from './dto/update-movement.input';
-import { PrismaService } from 'src/shared/prisma/prisma.service';
+import { PrismaService } from '../shared/prisma/prisma.service';
 import { Movement } from './entities/movement.entity';
 
 @Injectable()
